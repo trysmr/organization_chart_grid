@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>組織図</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="cd-main">
+    <% const departments =
+    [
+      {
+        "department_name": "営業部",
+        "manager": "織田 信長",
+        "manager_title": "部長",
+        "sections":
+        [
+          {
+            "section_name": "第1課",
+            "manager": "羽柴 秀吉",
+            "manager_title": "課長",
+            "units":
+            [
+              {
+                "unit_name": "1係",
+                "manager": "石田 光成",
+                "manager_title": "係長",
+                "staffs":
+                []
+              },
+              {
+                "unit_name": "2係",
+                "manager": "竹中 半兵衛",
+                "manager_title": "係長",
+                "staffs":
+                []
+              }
+            ]
+          },
+          {
+            "section_name": "第2課",
+            "manager": "徳川 家康",
+            "manager_title": "課長",
+            "units":
+            [
+              {
+                "unit_name": "1係",
+                "manager": "酒井 忠次",
+                "manager_title": "係長",
+                "staffs":
+                []
+              },
+              {
+                "unit_name": "2係",
+                "manager": "本多 忠勝",
+                "manager_title": "係長",
+                "staffs":
+                []
+              },
+              {
+                "unit_name": "3係",
+                "manager": "榊原 康政",
+                "manager_title": "係長",
+                "staffs":
+                []
+              },
+              {
+                "unit_name": "4係",
+                "manager": "井伊 直政",
+                "manager_title": "係長",
+                "staffs":
+                []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+    ; %>
+    <% departments.forEach((department) => { %>
+      <%- include('../components/department', {department: department}); %>
+    <% }) %>
+  </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<div class="cd-wrapper">
+  <div class="cd-parent">
+    <div class="cd-department cd-department-3">
+      <div class="cd-name"><%= unit.unit_name %></div>
+      <div class="cd-staff">
+        <div class="cd-staff-name"><%= unit.manager %></div>
+        <div class="cd-title"><%= unit.manager_title %></div>
+      </div>
+    </div>
+  </div>
+  <% if (unit.staffs && unit.staffs.length > 0) { %>
+    <div class="cd-children cd-department-end">
+      <% unit.staffs.forEach((staff) => { %>
+        <div class="cd-staff">
+          <div class="cd-staff-name"><%= staff.staff_name %></div>
+        </div>
+      <% }) %>
+    </div>
+  <% } %>
+</div>

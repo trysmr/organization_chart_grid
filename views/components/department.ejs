@@ -1,0 +1,16 @@
+<div class="cd-wrapper">
+  <div class="cd-parent">
+    <div class="cd-department cd-department-1">
+      <div class="cd-name"><%= department.department_name %></div>
+      <div class="cd-staff">
+        <div class="cd-staff-name"><%= department.manager %></div>
+        <div class="cd-title"><%= department.manager_title %></div>
+      </div>
+    </div>
+  </div>
+  <div class="cd-children">
+    <% department.sections.forEach((section) => { %>
+      <%- include('../components/section', {section: section}); %>
+    <% }) %>
+  </div>
+</div>

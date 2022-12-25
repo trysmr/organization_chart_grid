@@ -1,0 +1,64 @@
+@import url('https://unpkg.com/@acab/reset.css');
+
+html {
+  color-scheme: light;
+}
+
+.cd-main {
+  display: grid;
+  grid-auto-flow: row;
+  justify-items: center;
+  row-gap: 2rem;
+  margin: 2rem 4rem;
+}
+
+.cd-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 12rem auto;
+}
+
+.cd-parent {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: start;
+}
+
+.cd-children {
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 1rem;
+}
+
+.cd-department-end {
+  display: grid;
+  grid-template-columns: 8rem 8rem 8rem 8rem 8rem;
+  row-gap: unset;
+  align-content: space-between;
+}
+
+.cd-department {
+  display: grid;
+  grid-auto-flow: row;
+  width: calc(100% - 2rem);
+  text-align: center;
+  border: 1px solid #333333;
+}
+
+.cd-department-end {
+  text-align: center;
+  border: 1px solid #333333;
+}
+
+.cd-name {
+  padding: 4px 8px;
+  background-color: #c3d2fd;
+}
+
+.cd-staff {
+  padding: 4px 8px;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  column-gap: 0.5rem;
+}
