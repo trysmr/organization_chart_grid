@@ -11,6 +11,7 @@ WORKDIR ${APP_ROOT}
 COPY package*.json ${APP_ROOT}/
 
 RUN apk update && apk add --no-cache \
+        git \
         tzdata \
  && npm install
 
